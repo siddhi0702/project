@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moodle webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="username">
+        <form action="">
+            <input type="text" name="username">
+            <input type="password" name="password">
+            <button type="submit">Login in</button>
+        </form>
+    </div><br>
+    <br>
+
+    <div class="clgName">
+        <h1><span>TSSM's Padmabhooshan Vasantdada Patil Institute</span>
+            <br> of Technology, Bavdhan
+        </h1>
+        <button type="submit">
+            <i class="fas fa-search"></i> <!-- Search icon -->
+        </button>
+    </div>
+
+ <!-- Announcements Banner -->
+ <div class="announcement-banner">
+    <!-- Left Section: Announcements Label -->
+    <div class="announcement-label">
+        ANNOUNCEMENTS
+    </div>
+
+    <!-- Center Section: Announcement Text -->
+    <div class="announcement-text">
+        <a href="#">Click Here</a> to Download MOODLE Mobile App for Android device.
+    </div>
+
+    <!-- Right Section: Play/Pause Icon -->
+    <div class="announcement-control">
+        <span>||</span> <!-- You can replace this with an icon later -->
+    </div>
+</div>
+
+
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="slides">
+            <img src="2.JPG" alt="Slide 1">
+        </div>
+
+        <div class="slides">
+            <img src="1.JPG" alt="Slide 2">
+        </div>
+
+        <div class="slides">
+            <img src="3.JPG" alt="Slide 3">
+        </div>
+        <div class="slides">
+            <img src="4.JPG" alt="Slide 4">
+        </div>
+        <div class="slides">
+            <img src="5.JPG" alt="Slide 5">
+        </div>
+
+        <!-- Next/Prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <script src="script.js"></script>
+    <div class="container">
+        <div class="menu-section">
+            <h3 class="section-title"><i class="icon">&#9776;</i> Main menu</h3>
+            <ul class="menu-list">
+                <a href=""><i class="fas fa-users"></i> Site news</a>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <h3 class="section-title"><i class="icon">&#9871;</i> Activities</h3>
+            <ul class="menu-list">
+                <li><i class="fas fa-users"></i> Forums</li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <h3 class="section-title"><i class="fas fa-compass"></i>
+                Navigation</h3>
+            <ul class="menu-list">
+                <li><i class="fas fa-home"></i>
+                    Home</li>
+                <li><i class="fas fa-users"></i>
+                    Site news</li>
+                <li><i class="fas fa-book"></i>Courses</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Section (Logo/Heading) -->
+            <div class="footer-left">
+                <h2>JSPM-e-निर्मीती</h2>
+            </div>
+
+            <!-- Center Section (Links) -->
+            <div class="footer-center">
+                <h3>INFO LINKS</h3>
+                <a href="#">JSPM Group of Institutes, Pune</a>
+            </div>
+
+            <!-- Right Section (Contact Information) -->
+            <div class="footer-right">
+                <h3>JSPM & TSSM Group of Institutes, Pune</h3>
+                <p>Address: S.No 84/2E/1/5, 3rd Floor, Sawant Corner,<br>
+                    Katraj Chowk, Katraj, Pune, Maharashtra 411046<br>
+                    Email: support_dcd@jspm.edu.in<br>
+                    Phone No: 020 2460 8725</p>
+                <a href="#">Get the mobile app</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Maintained By Digital Content Development Cell, ARQAC, JSPM & TSSM Group of Institutes, Pune</p>
+        </div>
+    </footer>
+    
+    
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
