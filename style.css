@@ -5,69 +5,84 @@
     box-sizing: border-box;
 }
 
+/* General adjustments for responsiveness */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
 
-
+/* Form container */
 form {
     display: flex;
     flex-direction: row;
-    margin-left: 950px;
     justify-content: space-evenly;
     z-index: 1000;
     color: black;
+    margin: 10px;
 }
 
 .username {
     background-color: rgb(27, 118, 92);
-    position: fixed;
     width: 100%;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 .username form input {
     width: 150px;
     height: 23px;
-    margin-top: 8px;
+    margin: 8px 5px;
 }
 
 .username form button {
     width: 5em;
-    margin-top: 8px;
-    margin-right: 20px;
+    margin: 8px 5px;
     color: white;
     background-color: red;
+    border: none;
+    cursor: pointer;
 }
 
+/* College Name Section */
 .clgName {
-    margin-top: 3px;
+    margin-top: 40px; /* Adjust for fixed header */
     background-color: rgb(24, 148, 113);
-    height: 90px;
-    position: relative;
+    height: auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .clgName h1 {
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+    margin-bottom: 10px;
 }
 
 .clgName button {
     float: right;
-    margin-right: 40px;
-    width: 15px;
-    height: 15px;
-    display: flex;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
     background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
-/* Announcements banner styles */
+/* Announcements banner */
 .announcement-banner {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     background-color: white;
     padding: 10px;
     border: 1px solid #ccc;
-    border-left: 5px solid #008080; /* Left color bar */
-    margin: 20px 0;
+    border-left: 5px solid #008080;
+    margin: 20px 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -82,39 +97,18 @@ form {
 
 .announcement-text {
     flex-grow: 1;
-    padding-left: 15px;
+    padding: 10px;
     font-size: 14px;
 }
 
-.announcement-text a {
-    color: #008080;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.announcement-text a:hover {
-    text-decoration: underline;
-}
-
 .announcement-control {
-    padding: 0 15px;
     font-weight: bold;
     color: #008080;
     cursor: pointer;
+    margin-left: auto;
 }
 
-/* Optional: Media queries for responsive design */
-@media (max-width: 768px) {
-    .announcement-banner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .announcement-control {
-        align-self: flex-end;
-    }
-}
-
+/* Slideshow */
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -122,49 +116,36 @@ form {
     overflow: hidden;
 }
 
-.slides {
-    display: none;
-    width: 100%;
-}
-
 .slides img {
     width: 100%;
 }
 
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: auto;
     padding: 16px;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px;
 }
 
 .next {
     right: 0;
-    border-radius: 2px 0 0 2px;
 }
 
 .prev {
     left: 0;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
+/* Navigation Dots */
 .dots {
     text-align: center;
     padding: 20px;
-    background-image: url(Screenshot\ 2024-09-20\ 175952.png);
+    background-color: #f5f5f5;
 }
 
 .dot {
@@ -175,34 +156,17 @@ form {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-
     transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
+.dot:hover,
+.active {
     background-color: #717171;
 }
 
-.one {
-    display: inline-block;
-    flex-direction: row;
-    max-width: 100%;
-    background-color: rgb(38, 37, 37);
-}
-
-
-.container {
-    width: 350px;
-    margin-left: 15px;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-image: url(8.jpeg);
-}
-
+/* Menu Section */
 .menu-section {
-    margin-bottom: 20px;
+    margin: 20px;
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #fff;
@@ -214,34 +178,24 @@ form {
     font-weight: bold;
     color: #009688;
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.icon {
-    margin-right: 5px;
 }
 
 .menu-list {
     list-style: none;
+    padding: 0;
 }
 
 .menu-list li {
-    display: flex;
-    align-items: center;
     font-size: 16px;
-    margin-bottom: 10px;
     color: #009688;
-}
-
-.menu-list li .icon {
-    margin-right: 8px;
+    margin-bottom: 10px;
 }
 
 .menu-list li:last-child {
     margin-bottom: 0;
 }
-/* Footer container */
+
+/* Footer */
 .footer {
     background-color: #333;
     color: #fff;
@@ -253,17 +207,16 @@ form {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0;
 }
 
-.footer-left, .footer-center, .footer-right {
+.footer-section {
     flex: 1;
     margin: 10px;
 }
 
-.footer h2, .footer h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .footer a {
@@ -275,21 +228,29 @@ form {
     text-decoration: underline;
 }
 
-/* Footer bottom */
 .footer-bottom {
     text-align: center;
     padding-top: 10px;
     border-top: 1px solid #444;
 }
 
-/* For smaller screens */
+/* Responsive Media Queries */
 @media (max-width: 768px) {
+    .username form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clgName button {
+        float: none;
+    }
+
+    .announcement-banner {
+        flex-direction: column;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
-    }
-
-    .footer-left, .footer-center, .footer-right {
-        margin: 10px 0;
     }
 }
